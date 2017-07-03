@@ -55,9 +55,6 @@ function main(context, done) {
         }else{
             cPremio = ' nenhum '
             nPessoas = 0;
-			if ((xAcertos) == 0) {
-				xAcertos = 'nenhum'
-			}
         }
 
 		//verifica o numero de ganhadores
@@ -70,7 +67,7 @@ function main(context, done) {
         }
 
 		//termino
-        if (true) {
+        if (xAcertos >= 4) {
             alertas.push({
                 title: 'Concurso: ' + cConcurso + ' de ' + cDtSorteio,
                 content: render(x[0], x[1], x[2], x[3], x[4], x[5], xAcertos, cPremio, cMsg)
